@@ -1,8 +1,19 @@
 import { defineUserConfig } from 'vuepress'
+import { hopeTheme } from 'vuepress-theme-hope'
 
 export default defineUserConfig({
   lang: 'zh-CN',
   title: 'RAYLRAS ZONE',
-  description: 'Stay Curious',
-  base: '/blog/'
+  base: '/blog/',
+  theme: hopeTheme({
+    author: {
+      name: 'RAYLRAS',
+    },
+    blog: {
+      description: 'Stay Curious'
+    },
+    plugins: {
+      blog: true
+    }
+  })
 })
